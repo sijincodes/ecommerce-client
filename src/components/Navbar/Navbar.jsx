@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
+import Cart from "../Cart/Cart";
 
 import "./Navbar.scss";
 
 function Navbar() {
+  const [open, setOpen] = useState(false)
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -44,13 +46,14 @@ function Navbar() {
             <span class="material-icons">search</span>
             <span class="material-icons">person</span>
             <span class="material-icons">favorite_border</span>
-            <div className="cartIcon">
+            <div className="cartIcon" onClick={()=>setOpen(!open)}>
               <span class="material-icons">shopping_cart</span>
               <span className="itemCount">0</span>
             </div>
           </div>
         </div>
       </div>
+      {open && <Cart />}
     </div>
   );
 }
