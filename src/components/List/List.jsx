@@ -3,7 +3,7 @@ import Card from "./../Card/Card";
 
 import "./List.scss";
 
-function List() {
+function List({catId,maxPrice,sort}) {
   return (
     <div className="list">
       {data.map((elm, index) => (
