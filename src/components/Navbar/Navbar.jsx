@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Cart from "../Cart/Cart";
+import { useSelector } from "react-redux";
 
 import "./Navbar.scss";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const products = useSelector((state) => state.cart.products);
+
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -62,7 +65,7 @@ function Navbar() {
             <span className="material-icons">favorite_border</span>
             <div className="cartIcon" onClick={() => setOpen(!open)}>
               <span className="material-icons">shopping_cart</span>
-              <span className="itemCount">0</span>
+              <span className="itemCount">{products.length}</span>
             </div>
           </div>
         </div>

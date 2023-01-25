@@ -1,4 +1,3 @@
-
 import Card from "../Card/Card";
 import useFetch from "../../hooks/useFetch";
 
@@ -21,9 +20,11 @@ function FeaturedProducts({ type }) {
         </p>
       </div>
       <div className="bottom">
-        {error ? "Oops someting went wrong!":loading ? "loading" :data.map((elm, index) => (
-          <Card item={elm} key={index} />
-        ))}
+        {error
+          ? "Oops someting went wrong!"
+          : loading
+          ? "loading"
+          : data?.map((elm, index) => <Card item={elm} key={index} />)}
       </div>
     </div>
   );
