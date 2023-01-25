@@ -34,7 +34,7 @@ function Cart() {
             <p>{item.desc?.substring(0, 100)}</p>
             <div className="price">1 x ${item.price}</div>
           </div>
-          <span class="material-icons delete">delete</span>
+          <span className="material-icons delete">delete</span>
         </div>
       ))}
       <div className="total">
