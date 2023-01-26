@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import List from "../../components/List/List";
 import useFetch from "../../hooks/useFetch";
 import "./Products.scss";
 
-function Products() {
+const Products = () => {
   const catId = parseInt(useParams().id);
   const [maxPrice, setMaxPrice] = useState(1000);
   const [sort, setSort] = useState(null);
@@ -13,6 +14,7 @@ function Products() {
   const { data, loading, error } = useFetch(
     `/sub-categories?[filters][categories][id][$eq]=${catId}`
   );
+
   const handleChange = (e) => {
     const value = e.target.value;
     const isChecked = e.target.checked;
@@ -23,13 +25,14 @@ function Products() {
         : selectedSubCats.filter((item) => item !== value)
     );
   };
+  console.log("here in products ", data);
   return (
     <div className="products">
       <div className="left">
         <div className="filterItem">
           <h2>Product Categories</h2>
-          {data?.map((item, index) => (
-            <div className="iputItem" key={index}>
+          {data?.map((item) => (
+            <div className="inputItem" key={item.id}>
               <input
                 type="checkbox"
                 id={item.id}
@@ -41,7 +44,7 @@ function Products() {
           ))}
         </div>
         <div className="filterItem">
-          <h2>Filter By Price</h2>
+          <h2>Filter by price</h2>
           <div className="inputItem">
             <span>0</span>
             <input
@@ -54,7 +57,7 @@ function Products() {
           </div>
         </div>
         <div className="filterItem">
-          <h2>Sort by </h2>
+          <h2>Sort by</h2>
           <div className="inputItem">
             <input
               type="radio"
@@ -63,7 +66,7 @@ function Products() {
               name="price"
               onChange={(e) => setSort("asc")}
             />
-            <label htmlFor="asc">Price(Lowest First)</label>
+            <label htmlFor="asc">Price (Lowest first)</label>
           </div>
           <div className="inputItem">
             <input
@@ -73,7 +76,7 @@ function Products() {
               name="price"
               onChange={(e) => setSort("desc")}
             />
-            <label htmlFor="desc">Price(Highest First)</label>
+            <label htmlFor="desc">Price (Highest first)</label>
           </div>
         </div>
       </div>
@@ -83,10 +86,15 @@ function Products() {
           src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
           alt=""
         />
-        <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats} />
+        <List
+          catId={catId}
+          maxPrice={maxPrice}
+          sort={sort}
+          subCats={selectedSubCats}
+        />
       </div>
     </div>
   );
-}
+};
 
 export default Products;

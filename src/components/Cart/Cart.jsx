@@ -18,6 +18,23 @@ function Cart() {
     });
     return total.toFixed(2);
   };
+  const stripePromise = loadStripe(
+    "pk_test_51MU9uMAafndBGZ2cVpc2xaWoUUxMI08dpIpT8ekxBjT4OWg6gUO9Rt1LWM4Azgb1GEAPJhpnrENIAy00h82ACf50007oHFBnPc"
+  );
+  const handlePayment = async () => {
+    try {
+      const stripe = await stripePromise;
+      const res = await makeRequest.post("/orders", {
+        products,
+      });
+      await stripe.redirectToCheckout({
+        sessionId: res.data.stripeSession.id,
+      });
+
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
     <div className="cart">
       <h1>Product name</h1>
@@ -36,7 +53,7 @@ function Cart() {
         <span>SUB TOTAL</span>
         <span>${totalPrice()}</span>
       </div>
-      <button>Proceed to Checkout</button>
+      <button onClick={handlePayment}>Proceed to Checkout</button>
       <span className="reset" onClick={()=>dispatch(resetCart())}>Reset Cart</span>
     </div>
   );
