@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 .footer{
     margin: 100px 200px 20px 200px;
 
@@ -32,9 +34,9 @@
             align-items: center;
 
             .logo{
-                color:#2879fe;
-                font-weight:bold;
-                font-size: 24px;
+                color:black;
+                font-family: 'Dancing Script', cursive;
+                font-size: 50px;
             }
             .copyright{
                 margin-left: 20px;

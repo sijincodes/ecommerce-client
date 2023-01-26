@@ -12,7 +12,7 @@ function Product() {
   const [selectedImg, setSelectedImg] = useState("img");
   const [quantity, setQuantity] = useState(1);
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
-const dispatch =useDispatch()
+  const dispatch = useDispatch();
   return (
     <div className="product">
       {loading ? (
@@ -51,9 +51,7 @@ const dispatch =useDispatch()
           <div className="right">
             <h1>{data?.attributes?.title}</h1>
             <span className="price">${data?.attributes?.price}</span>
-            <p>
-             {data?.attributes?.desc}
-            </p>
+            <p>{data?.attributes?.desc}</p>
             <div className="quantity">
               <button
                 onClick={() =>
@@ -65,14 +63,21 @@ const dispatch =useDispatch()
               {quantity}
               <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
             </div>
-            <button className="add" onClick={()=>dispatch(addToCart({
-              id:data.id,
-              title:data.attributes.title,
-              desc:data.attributes.desc,
-              price:data.attributes.price,
-              img:data.attributes.img.data.attributes.url,
-              quantity
-            }))}>
+            <button
+              className="add"
+              onClick={() =>
+                dispatch(
+                  addToCart({
+                    id: data.id,
+                    title: data.attributes.title,
+                    desc: data.attributes.desc,
+                    price: data.attributes.price,
+                    img: data.attributes.img.data.attributes.url,
+                    quantity,
+                  })
+                )
+              }
+            >
               <span className="material-icons">shopping_cart</span>Add to Cart
             </button>
             <div className="links">
@@ -80,20 +85,18 @@ const dispatch =useDispatch()
                 <span className="material-icons">shopping_cart</span>Add to
                 Wishlist
               </div>
-              <div className="item">
-                <span className="material-icons">compare</span>Add to Compare
-              </div>
+              
             </div>
             <div className="info">
-              <span>Vendor: Polo</span>
-              <span>Product Type: T-Shirt</span>
-              <span>Tag: T-Shirt, Women, Top</span>
+              <span>Vendor: XYZ Corp</span>
+              <span>Product Type: Strong EDT</span>
+              <span>Tag:Perfume, EDT</span>
             </div>
             <hr />
             <div className="info">
-              <span>DESCRIPTION</span>
+              <span>Lorem Ipsum Lorem Ipsum</span>
               <hr />
-              <span>ADDITIONAL INFORMATION</span>
+              <span>Lorem Ipsum</span>
               <hr />
               <span>FAQ</span>
             </div>

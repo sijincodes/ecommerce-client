@@ -1,18 +1,19 @@
 .cart{
     position: absolute;
-    right: 20px;
-    top: 80px;
+    right: 50px;
+    top: 60px;
     z-index: 999;
-    background-color: white;
+    background-color: #FDEEDC;
     padding: 20px;
     -webkit-box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 
     h1{
         margin-bottom: 30px;
-        color: gray;
+        color: #42032C;
         font-weight: 400;
-        font-size: 24px;
+        font-size: 20px;
 
     }
 
@@ -28,21 +29,18 @@
         }
         .details{
             h1{
-                font-size: 18px;
+                font-size: 15px;
                 font-weight: 500;
+                margin-bottom: 5px;
             }
-            p{
-                color: gray;
-                margin-bottom: 10px;
-                font-size: 14px;
-            }
+           
             .price{
-                color:#2879fe
+                color:#42032C
             }
         }
         .delete{
             color: red;
-            font-size: 30px;
+            font-size: 20px;
             cursor: pointer;
         }
     }
@@ -50,11 +48,11 @@
         display: flex;
         justify-content: space-between;
         font-weight: 500;
-        font-size: 18px;
-        margin-bottom: 20px;
+        font-size: 15px;
+        margin-bottom: 10px;
     }
     button {
-        width: 250px;
+        width: 150px;
         padding: 10px;
         display: flex;
         align-items: center;
@@ -62,10 +60,11 @@
         gap: 20px;
         cursor: pointer;
         border: none;
-        background-color: #2879fe;
-        color: white;
+        background-color: #F1A661;
+        color: #42032C;
         font-weight: 500;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        border-radius: 10px;
       }
       .reset{
         color:red;

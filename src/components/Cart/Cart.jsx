@@ -43,10 +43,11 @@ function Cart() {
           <img src={process.env.REACT_APP_UPLOAD_URL + item.img} alt="cart-img" />
           <div className="details">
             <h1>{item.title}</h1>
-            <p>{item.desc?.substring(0, 100)}</p>
+        
             <div className="price">{item.quantity} x ${item.price}</div>
+            <span className="material-icons delete" onClick={()=>dispatch(removeItem(item.id))}>delete</span>
           </div>
-          <span className="material-icons delete" onClick={()=>dispatch(removeItem(item.id))}>delete</span>
+         
         </div>
       ))}
       <div className="total">

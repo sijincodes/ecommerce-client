@@ -14,14 +14,6 @@ function Navbar() {
       <div className="wrapper">
         <div className="left">
           <div className="item">
-            <img src="./../../images/en.png" alt="dollar-img" />
-            <span className="material-icons">expand_more</span>
-          </div>
-          <div className="item">
-            <span>USD</span>
-            <span className="material-icons">expand_more</span>
-          </div>
-          <div className="item">
             <Link className="link" to="/products/1">
               Women
             </Link>
@@ -31,37 +23,27 @@ function Navbar() {
               Men
             </Link>
           </div>
-          <div className="item">
-            <Link className="link" to="/products/3">
-              Children
-            </Link>
-          </div>
         </div>
-        <div className="center">
+        <div className="center brand">
           <Link className="link" to="/">
-            My SHOP
+            parfum
           </Link>
         </div>
         <div className="right">
           <div className="item">
-            <Link className="link" to="/">
-              About
-            </Link>
-          </div>
-          <div className="item">
-            <Link className="link" to="/">
+            <Link className="link" to="/Coming-Soon">
               Contact
             </Link>
           </div>
           <div className="item">
-            <Link className="link" to="/">
+            <Link className="link" to="/Coming-Soon">
               Stores
             </Link>
           </div>
 
           <div className="icons">
             <span className="material-icons">search</span>
-            <span className="material-icons">person</span>
+
             <span className="material-icons">favorite_border</span>
             <div className="cartIcon" onClick={() => setOpen(!open)}>
               <span className="material-icons">shopping_cart</span>

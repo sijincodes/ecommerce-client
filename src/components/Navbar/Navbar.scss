@@ -1,3 +1,6 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 .navbar {
   height: 80px;
   .wrapper {
@@ -19,6 +22,11 @@
         font-size: 30px;
         letter-spacing: 2px;
     }
+    .brand {
+      font-family: 'Dancing Script', cursive;
+      font-size: 50px;
+      padding-left: 50px;
+    }
     .right {
       display: flex;
       align-items: center;
@@ -38,8 +46,8 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background-color: #2879fe;
-            color: white;
+            background-color: #D36B00;
+            color: #42032C;
             position: absolute;
             right: -10px;
             top: -10px;

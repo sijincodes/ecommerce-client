@@ -10,9 +10,8 @@ function Footer() {
           <h1>Categories</h1>
           <span>Women</span>
           <span>Men</span>
-          <span>Shoes</span>
-          <span>Accessories</span>
-          <span>New Arrivals</span>
+         
+          <span>Classics</span>
         </div>
         <div className="item">
           <h1>Links</h1>
@@ -43,7 +42,7 @@ function Footer() {
       </div>
       <div className="bottom">
         <div className="left">
-          <span  className="logo">My Shop</span>
+          <span  className="logo">parfum</span>
           <span className="copyright"> © Copyright 2023. All Rights Reserved</span>
         </div>
         <div className="right">
