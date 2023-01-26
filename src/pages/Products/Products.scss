@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .products{
     padding: 30px 50px;
     display: flex;
@@ -13,8 +14,9 @@
 
 
             h2{
-               font-weight: 400;
+               font-size: 15px;
                margin-bottom: 20px;
+               font-family: 'Roboto', sans-serif;
             }
             .inputItem{
                 margin-bottom: 10px;

@@ -8,7 +8,7 @@ import "./Products.scss";
 const Products = () => {
   const catId = parseInt(useParams().id);
   const [maxPrice, setMaxPrice] = useState(1000);
-  const [sort, setSort] = useState(null);
+  const [sort, setSort] = useState("asc");
   const [selectedSubCats, setSelectedSubCats] = useState([]);
 
   const { data, loading, error } = useFetch(
@@ -52,6 +52,7 @@ const Products = () => {
               min={0}
               max={1000}
               onChange={(e) => setMaxPrice(e.target.value)}
+              className="range"
             />
             <span>{maxPrice}</span>
           </div>
@@ -83,7 +84,7 @@ const Products = () => {
       <div className="right">
         <img
           className="catImg"
-          src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
+          src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
           alt=""
         />
         <List
