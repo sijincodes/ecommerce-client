@@ -38,11 +38,23 @@
       font-weight: 500;
       border-radius: 10px;
     }
+    &:hover button {
+      text-decoration: underline;
+      background-color: #A75D5D;
+      color: whitesmoke;
+    }
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      position: absolute;
+      transition: 1s;
     }
+     &:hover img {
+      transform: scale(1.1);
+     }
+    
   }
+ 
 }

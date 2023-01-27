@@ -43,7 +43,7 @@ const Products = () => {
             </div>
           ))}
         </div>
-        <div className="filterItem">
+        {/* <div className="filterItem">
           <h2>Filter by price</h2>
           <div className="inputItem">
             <span>0</span>
@@ -56,7 +56,7 @@ const Products = () => {
             />
             <span>{maxPrice}</span>
           </div>
-        </div>
+        </div> */}
         <div className="filterItem">
           <h2>Sort by</h2>
           <div className="inputItem">
@@ -67,7 +67,7 @@ const Products = () => {
               name="price"
               onChange={(e) => setSort("asc")}
             />
-            <label htmlFor="asc">Price (Lowest first)</label>
+            <label htmlFor="asc">Sort by Lowest Price</label>
           </div>
           <div className="inputItem">
             <input
@@ -77,7 +77,7 @@ const Products = () => {
               name="price"
               onChange={(e) => setSort("desc")}
             />
-            <label htmlFor="desc">Price (Highest first)</label>
+            <label htmlFor="desc">Sort by Highest Price</label>
           </div>
         </div>
       </div>

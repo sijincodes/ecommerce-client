@@ -14,12 +14,12 @@ function Navbar() {
       <div className="wrapper">
         <div className="left">
           <div className="item">
-            <Link className="link" to="/products/1">
+            <Link className="link cate" to="/products/1">
               Women
             </Link>
           </div>
           <div className="item">
-            <Link className="link" to="/products/2">
+            <Link className="link cate" to="/products/2">
               Men
             </Link>
           </div>
@@ -31,12 +31,12 @@ function Navbar() {
         </div>
         <div className="right">
           <div className="item">
-            <Link className="link" to="/Coming-Soon">
+            <Link className="link cate" to="/Coming-Soon">
               Contact
             </Link>
           </div>
           <div className="item">
-            <Link className="link" to="/Coming-Soon">
+            <Link className="link cate" to="/Coming-Soon">
               Stores
             </Link>
           </div>

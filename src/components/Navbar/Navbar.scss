@@ -18,6 +18,7 @@
       display: flex;
       align-items: center;
       gap:25px;
+
     }
     .center {
         font-size: 30px;
@@ -26,8 +27,27 @@
     .brand {
       font-family: 'Dancing Script', cursive;
       font-size: 50px;
-      padding-left: 50px;
+      padding-left: 100px;
+      position: relative;
+      &::before {
+        visibility: hidden;
+		transform: scaleX(0);
+		transition: all 0.4s ease-in-out 0s;
+    content: "";
+		position: absolute;
+		width: 60%;
+		height: 2px;
+		bottom: 0;
+		margin: -5px 0;
+		background-color: black;
+	}
+  &:hover:before {
+		visibility: visible;
+		transform: scaleX(1);
+	}
+    
     }
+   
     .right {
       display: flex;
       align-items: center;
