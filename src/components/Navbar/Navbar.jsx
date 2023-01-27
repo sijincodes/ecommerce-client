@@ -52,7 +52,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-      {open && <Cart />}
+      {open && <Cart setOpen={setOpen} open={open}/>}
     </div>
   );
 }
