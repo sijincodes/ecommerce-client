@@ -5,7 +5,7 @@ parfum is an Ecommerce site for selling perfumes.
 ## Screenshots
 
 <kbd>
-<img src="https://res.cloudinary.com/djxzl8ay2/image/upload/v1674902753/JT/Screenshot_2023-01-28_at_11.40.46_AM_q6cgll.png" alt="snapshot">
+<img src="./public/images/Screenshot 2023-01-28 at 11.40.46 AM.png" alt="snapshot">
 </kbd>
 
 
