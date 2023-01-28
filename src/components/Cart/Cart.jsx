@@ -38,7 +38,7 @@ function Cart({setOpen, open}) {
     <div className="cart">
     <div className="row">
       <h1>Product name</h1>
-      <span class="material-icons close-icon" onClick={() => setOpen(!open)}>close</span>
+      <span className="material-icons close-icon" onClick={() => setOpen(!open)}>close</span>
       </div>
       {products?.map((item, index) => (
         <div className="item" key={index}>

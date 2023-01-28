@@ -58,11 +58,11 @@ function Product() {
                   setQuantity((prev) => (prev === 1 ? 1 : prev - 1))
                 }
               >
-                <span class="material-icons">remove</span>
+                <span className="material-icons">remove</span>
               </button>
               {quantity}
               <button onClick={() => setQuantity((prev) => prev + 1)}>
-                <span class="material-icons">add</span>
+                <span className="material-icons">add</span>
               </button>
             </div>
             <button
@@ -84,7 +84,7 @@ function Product() {
             </button>
             <div className="links">
               <div className="item">
-                <span className="material-icons">shopping_cart</span>Add to
+                <span className="material-icons">favorite</span>Add to
                 Wishlist
               </div>
             </div>

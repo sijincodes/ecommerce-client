@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { useState } from "react";
 
 import "./App.scss";
+
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
@@ -9,10 +11,12 @@ import Products from "./pages/Products/Products";
 import UnderContruction from "./pages/UnderContruction/UnderContruction";
 
 const Layout = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
   return (
     <div className="app">
-      <Navbar />
-      <Outlet />
+      <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <Outlet context={[searchQuery, setSearchQuery]} />
       <Footer />
     </div>
   );

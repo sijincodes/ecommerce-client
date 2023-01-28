@@ -1,11 +1,12 @@
 import React from "react";
-import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, useOutletContext } from "react-router-dom";
 import List from "../../components/List/List";
 import useFetch from "../../hooks/useFetch";
 import "./Products.scss";
 
 const Products = () => {
+  const [searchQuery, setSearchQuery] = useOutletContext();
   const catId = parseInt(useParams().id);
   const [maxPrice, setMaxPrice] = useState(1000);
   const [sort, setSort] = useState("asc");
@@ -25,7 +26,7 @@ const Products = () => {
         : selectedSubCats.filter((item) => item !== value)
     );
   };
-  console.log("here in products ", data);
+
   return (
     <div className="products">
       <div className="left">
@@ -92,6 +93,8 @@ const Products = () => {
           maxPrice={maxPrice}
           sort={sort}
           subCats={selectedSubCats}
+          setSearchQuery={setSearchQuery}
+          searchQuery={searchQuery}
         />
       </div>
     </div>

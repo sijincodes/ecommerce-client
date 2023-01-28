@@ -1,0 +1,19 @@
+.search{
+    display: flex;
+    align-items: center;
+.searchBoxInputBox{
+    width: 100%;
+  border: none;
+    background-color: #F5C7A9 ;
+    
+   
+    padding:7px 5px;
+    border-radius: 5px;
+}
+.searchBoxInputBox:focus {
+    outline: none;
+  }
+}
+
+
+
