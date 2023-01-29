@@ -9,9 +9,8 @@ parfum is an Ecommerce site for selling perfumes.
 </kbd>
 
 
-## 🔥 Check out the application : (Since the backend is built via Strapi , the application needs a dedicated paid server so the application has not been hosted) 
-
-- 
+## 🔥 Check out the application 
+(Since the backend is built via Strapi , the application needs a dedicated paid server so the application has not been hosted) 
 
 https://user-images.githubusercontent.com/110112252/215320468-6b564180-d644-438a-8c9a-d79caaa134ed.mp4
 
